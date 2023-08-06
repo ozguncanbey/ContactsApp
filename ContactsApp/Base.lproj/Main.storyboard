@@ -164,6 +164,7 @@
                             <constraint firstItem="zfe-7v-RU3" firstAttribute="top" secondItem="IEw-ge-oC7" secondAttribute="top" constant="42" id="weB-O6-FBr"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Mzf-wJ-wdY"/>
                     <connections>
                         <outlet property="contactImageView" destination="zfe-7v-RU3" id="A0g-hp-zvs"/>
                         <outlet property="doneButton" destination="Wkn-nQ-0MD" id="bQ5-s3-DLB"/>
@@ -259,7 +260,12 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="qqw-ZE-pCX">
-                        <barButtonItem key="rightBarButtonItem" title="Edit" id="Nbx-rM-Jx3"/>
+                        <barButtonItem key="rightBarButtonItem" title="Edit" id="Nbx-rM-Jx3">
+                            <connections>
+                                <action selector="editButtonTapped:" destination="NTa-Pr-HyX" id="TZP-pM-fOy"/>
+                                <segue destination="Rap-VN-njQ" kind="show" id="Voq-BV-BsJ"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="detailFullnameLabel" destination="xtT-Zv-BoY" id="ozg-Yb-EGC"/>
@@ -290,6 +296,9 @@
             <point key="canvasLocation" x="130.53435114503816" y="-27.464788732394368"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Voq-BV-BsJ"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="contact" width="2048" height="2048"/>
         <image name="envelope.fill" catalog="system" width="128" height="93"/>

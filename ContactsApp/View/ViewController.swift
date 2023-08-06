@@ -54,6 +54,15 @@ class ViewController: UIViewController {
             print("Error!")
         }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let index = sender as? Int
+        
+        if segue.identifier == "toDetailVC" {
+            let destinationVC = segue.destination as! DetailViewController
+            destinationVC.contact = contactArray[index!]
+        }
+    }
 }
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
