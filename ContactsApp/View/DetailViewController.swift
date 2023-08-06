@@ -6,8 +6,11 @@
 //
 
 import UIKit
+import CoreData
 
 class DetailViewController: UIViewController {
+    
+    let context = appDelegate.persistentContainer.viewContext
 
     @IBOutlet weak var detailImageView: UIImageView!
     @IBOutlet weak var detailFullnameLabel: UILabel!

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		77782CCF2A7FD0E400E19FF2 /* NewContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77782CCE2A7FD0E400E19FF2 /* NewContactViewController.swift */; };
 		77F943062A7E905B004FCE47 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F943052A7E905B004FCE47 /* AppDelegate.swift */; };
 		77F943082A7E905B004FCE47 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F943072A7E905B004FCE47 /* SceneDelegate.swift */; };
 		77F9430A2A7E905B004FCE47 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F943092A7E905B004FCE47 /* ViewController.swift */; };
@@ -15,11 +16,11 @@
 		77F943122A7E905C004FCE47 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77F943112A7E905C004FCE47 /* Assets.xcassets */; };
 		77F943152A7E905C004FCE47 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77F943132A7E905C004FCE47 /* LaunchScreen.storyboard */; };
 		77F9431E2A7E9368004FCE47 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F9431D2A7E9368004FCE47 /* TableViewCell.swift */; };
-		77F943202A7E9804004FCE47 /* NewContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F9431F2A7E9804004FCE47 /* NewContactViewController.swift */; };
 		77F943222A7E9A55004FCE47 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F943212A7E9A55004FCE47 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		77782CCE2A7FD0E400E19FF2 /* NewContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewContactViewController.swift; sourceTree = "<group>"; };
 		77F943022A7E905B004FCE47 /* ContactsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContactsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77F943052A7E905B004FCE47 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		77F943072A7E905B004FCE47 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -30,7 +31,6 @@
 		77F943142A7E905C004FCE47 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		77F943162A7E905C004FCE47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		77F9431D2A7E9368004FCE47 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
-		77F9431F2A7E9804004FCE47 /* NewContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewContactViewController.swift; sourceTree = "<group>"; };
 		77F943212A7E9A55004FCE47 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -88,8 +88,8 @@
 			isa = PBXGroup;
 			children = (
 				77F943092A7E905B004FCE47 /* ViewController.swift */,
-				77F9431F2A7E9804004FCE47 /* NewContactViewController.swift */,
 				77F943212A7E9A55004FCE47 /* DetailViewController.swift */,
+				77782CCE2A7FD0E400E19FF2 /* NewContactViewController.swift */,
 				77F9431D2A7E9368004FCE47 /* TableViewCell.swift */,
 			);
 			path = View;
@@ -170,8 +170,8 @@
 				77F943102A7E905B004FCE47 /* ContactsApp.xcdatamodeld in Sources */,
 				77F9430A2A7E905B004FCE47 /* ViewController.swift in Sources */,
 				77F943062A7E905B004FCE47 /* AppDelegate.swift in Sources */,
-				77F943202A7E9804004FCE47 /* NewContactViewController.swift in Sources */,
 				77F943082A7E905B004FCE47 /* SceneDelegate.swift in Sources */,
+				77782CCF2A7FD0E400E19FF2 /* NewContactViewController.swift in Sources */,
 				77F943222A7E9A55004FCE47 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
