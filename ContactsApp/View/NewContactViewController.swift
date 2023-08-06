@@ -63,7 +63,7 @@ class NewContactViewController: UIViewController, UIImagePickerControllerDelegat
                 
                 appDelegate.saveContext()
                 
-                NotificationCenter.default.post(name: Notification.Name(rawValue: "saved!"), object: nil)
+                //NotificationCenter.default.post(name: Notification.Name(rawValue: "saved!"), object: nil)
                 navigationController?.popViewController(animated: true)
             }
         }

@@ -16,7 +16,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var detailFullnameLabel: UILabel!
     @IBOutlet weak var phoneNumberLabel: UILabel!
     
-    var contact : Contact? = nil
+    var contact : Contact?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,9 +27,5 @@ class DetailViewController: UIViewController {
             detailFullnameLabel.text = contact.name
             phoneNumberLabel.text = contact.number
         }
-    }
-
-    @IBAction func editButtonTapped(_ sender: Any) {
-        
     }
 }

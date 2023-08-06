@@ -19,6 +19,9 @@ class ViewController: UIViewController {
     
     var contactArray = [Contact]()
     
+    var isSearching = false
+    var searchedText: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -35,7 +38,11 @@ class ViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        NotificationCenter.default.addObserver(self, selector: #selector(getDatas), name: NSNotification.Name(rawValue: "saved!"), object: nil)
+        if isSearching {
+            searching(contactName: searchedText!)
+        } else {
+            getDatas()
+        }
         tableView.reloadData()
     }
 
@@ -50,6 +57,18 @@ class ViewController: UIViewController {
     @objc func getDatas() {
         do {
             contactArray = try context.fetch(Contact.fetchRequest())
+        } catch {
+            print("Error!")
+        }
+    }
+    
+    func searching(contactName: String) {
+        let fetchRequest: NSFetchRequest<Contact> = Contact.fetchRequest()
+        
+        fetchRequest.predicate = NSPredicate(format: "name CONTAINS %@", contactName)
+        
+        do {
+            contactArray = try context.fetch(fetchRequest)
         } catch {
             print("Error!")
         }
@@ -72,6 +91,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         let contact = contactArray[indexPath.row]
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! TableViewCell
@@ -85,18 +105,36 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        
         if editingStyle == .delete {
             let contact = contactArray[indexPath.row]
             self.context.delete(contact)
             appDelegate.saveContext()
-            getDatas()
+            
+            if isSearching {
+                searching(contactName: searchedText!)
+            } else {
+                getDatas()
+            }
+            
             tableView.reloadData()
         }
     }
 }
 
 extension ViewController: UISearchBarDelegate {
+    
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         
+        searchedText = searchText
+        
+        if searchText == "" {
+            isSearching = false
+            getDatas()
+        } else {
+            isSearching = true
+            searching(contactName: searchedText!)
+        }
+        tableView.reloadData()
     }
 }
